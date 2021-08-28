@@ -19,6 +19,7 @@ export type ActivityDocument = Activity & Document;
   },
 })
 export class Activity {
+  _id: string;
   @Prop()
   user: string; // IUser['id'];
   @Prop()
@@ -29,8 +30,6 @@ export class Activity {
   text?: string; // message, tag, comment, location
   @Prop()
   action: TActivityAction;
-  @Prop()
-  taimeStamp: string; //mmddyyyy hh:mm:ss
 }
 
 export const ActivitySchema = SchemaFactory.createForClass(Activity);
