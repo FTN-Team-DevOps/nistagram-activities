@@ -5,7 +5,7 @@ import { ActivityModule } from './activity/activity.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.MONGODB_URI),
+    MongooseModule.forRoot(process.env.MONGODB_URI || ''),
     PrometheusModule.register(),
     ActivityModule,
   ],
